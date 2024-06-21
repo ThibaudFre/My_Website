@@ -1,0 +1,27 @@
+{
+  "name": "my_website",
+  "version": "1.0.0",
+  "description": "You can find in this repository all the code for my personal website",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "sassLayout": "sass --watch ./styles/scss/layout.scss:./styles/css/layout.css",
+    "sassHome": "sass --watch ./styles/scss/home.scss:./styles/css/home.css",
+    "sassAbout": "sass --watch ./styles/scss/about.scss:./styles/css/about.css",
+    "sassExp": "sass --watch ./styles/scss/exp.scss:./styles/css/exp.css",
+    "sassProj": "sass --watch ./styles/scss/projects.scss:./styles/css/projects.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "next": "^14.2.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "sass": "^1.77.6"
+  }
+}
