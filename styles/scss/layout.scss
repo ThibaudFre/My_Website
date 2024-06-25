@@ -9,8 +9,8 @@ a {
 }
 
 body {
-    background: rgb(2,0,36);
-    background: linear-gradient(153deg, rgba(2,0,36,0) 0%, rgba(32,33,47,0.09007352941176472) 100%);
+    background: rgb(2, 0, 36);
+    background: linear-gradient(153deg, rgba(2, 0, 36, 0) 0%, rgba(32, 33, 47, 0.09007352941176472) 100%);
     min-height: 100vh;
 }
 
@@ -24,8 +24,8 @@ header {
     align-content: center;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
     height: 50px;
-    opacity: 0.90; 
-    
+    opacity: 0.90;
+
     img {
         margin: 10px;
         opacity: 70%;
@@ -33,82 +33,97 @@ header {
     }
 
     img:hover {
-        opacity: 0.50;        
+        opacity: 0.50;
     }
 
-    .navButton{
+    .navButton {
         position: absolute;
         right: 20px;
         bottom: 10px;
         cursor: pointer;
-        @media  screen and (min-width: 640px ){
+
+        @media screen and (min-width: 640px) {
             visibility: hidden;
         }
     }
 
-    .Nav {
-        ul {
 
-            li {
-                border-radius: 2.5px;
-                display: flex;
-                justify-content: center;
-                align-content: center;
-                list-style: none;
-                height: 50px;
-
-                a {
-                    padding-top: 15px;
-                    width: 100px;
-                    text-align: center;
-                    font-weight: 500;
-                }
-                
-            }
-            li:hover {
-                background-color: rgba(0, 0, 0, 0.068);
-                display: flex;
-            }
-            
-        }
-    }
-
-    .verticalNav {
-        position: fixed;
-        top: O;
-        right: 0;
-        height: 100vh;
-            width: 250px;
-            z-index: 999;
-            background-color: white;
-            box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-
-        @media  screen and (min-width: 640px ){
-            visibility: hidden;
-        }
-    }
     .horizonNav {
+        position: fixed;
+        top: 50px;
         max-width: 700px;
-        width: 70%;
+        width: 100%;
+
         ul {
-            position: fixed;
             display: flex;
-            visibility: hidden;
+            flex-direction: column;
             justify-content: space-between;
             align-content: center;
             display: flex;
             height: 50px;
+            width: 100%;
 
-            @media  screen and (min-width: 640px ){
-                position: static;
-                visibility: inherit;
+            li {
+                background-color: white;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                list-style: none;
+                height: 100px;
+                width: 100%;
+
+                a {
+                    padding: 7px 0 7px 0px;
+                    width: 100%;
+                    text-align: center;
+                    font-weight: 500;
+                }
+
             }
-            
+
+            li:hover {
+                background-color: rgba(0, 0, 0, 0.3);
+                display: flex;
+            }
+
+        }
+
+        @media screen and (min-width: 640px) {
+            position: initial;
+            top: unset;
+            width: 70%;
+
+            ul {
+                flex-direction: row;
+                height: 50px;
+
+                li {
+                    height: 50px;
+                    border-radius: 2.5px;
+                    a {
+                        padding: 15px 0 0 0px;
+                    }
+                }
+                li:Hover {
+                    background-color: rgba(0, 0, 0, 0.085);
+                }
+            }
         }
     }
 
+    .navNotOpen {
+        display: absolute;
+        visibility: hidden;
+    }
+
+    .navOpen {
+        display: flex;
+        visibility: visible;
+    }
+
 }
- main {
+
+main {
     padding: 25px 0 0 0;
 
- }
+}

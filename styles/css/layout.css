@@ -45,57 +45,68 @@ header .navButton {
     visibility: hidden;
   }
 }
-header .Nav ul li {
-  border-radius: 2.5px;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  list-style: none;
-  height: 50px;
-}
-header .Nav ul li a {
-  padding-top: 15px;
-  width: 100px;
-  text-align: center;
-  font-weight: 500;
-}
-header .Nav ul li:hover {
-  background-color: rgba(0, 0, 0, 0.068);
-  display: flex;
-}
-header .verticalNav {
-  position: fixed;
-  top: O;
-  right: 0;
-  height: 100vh;
-  width: 250px;
-  z-index: 999;
-  background-color: white;
-  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-}
-@media screen and (min-width: 640px) {
-  header .verticalNav {
-    visibility: hidden;
-  }
-}
 header .horizonNav {
+  position: fixed;
+  top: 50px;
   max-width: 700px;
-  width: 70%;
+  width: 100%;
 }
 header .horizonNav ul {
-  position: fixed;
   display: flex;
-  visibility: hidden;
+  flex-direction: column;
   justify-content: space-between;
   align-content: center;
   display: flex;
   height: 50px;
+  width: 100%;
+}
+header .horizonNav ul li {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  list-style: none;
+  height: 100px;
+  width: 100%;
+}
+header .horizonNav ul li a {
+  padding: 7px 0 7px 0px;
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+}
+header .horizonNav ul li:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
 }
 @media screen and (min-width: 640px) {
-  header .horizonNav ul {
-    position: static;
-    visibility: inherit;
+  header .horizonNav {
+    position: initial;
+    top: unset;
+    width: 70%;
   }
+  header .horizonNav ul {
+    flex-direction: row;
+    height: 50px;
+  }
+  header .horizonNav ul li {
+    height: 50px;
+    border-radius: 2.5px;
+  }
+  header .horizonNav ul li a {
+    padding: 15px 0 0 0px;
+  }
+  header .horizonNav ul li:Hover {
+    background-color: rgba(0, 0, 0, 0.085);
+  }
+}
+header .navNotOpen {
+  display: absolute;
+  visibility: hidden;
+}
+header .navOpen {
+  display: flex;
+  visibility: visible;
 }
 
 main {
